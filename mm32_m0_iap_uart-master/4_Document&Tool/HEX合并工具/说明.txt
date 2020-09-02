@@ -1,8 +1,4 @@
-1、双击merge_Version.bat运行。
-
-2、版本要输入数字。比如10,20,30,31，分别代表1.0,2.0,3.0,3.1。
-
-3、hex文件放置在hex文件夹下。
+1、首先将需要合并的hex文件放置在hex文件夹下，hex文件名称要改为对应的  “bootloader.hex” 和 “app.hex”
    boot固件地址在前，app固件地址在后。
    比如：bootloader---0x80000000
                 app---0x80002000
@@ -12,6 +8,10 @@
    merge\mergehex.exe --merge .\hex\app.hex                                      .\hex\bootloader.hex  --output %%a.hex 
    上面两句是有区别的，关键看谁的起始地址是0x80000000。
    本脚本采用bootloader的起始地址是0x80000000。
+
+2、确定要合并的文件都放置好后，双击merge_Version.bat运行。
+
+3、版本要输入数字。比如10,20,30,31，分别代表1.0,2.0,3.0,3.1。
 
 4、同时生成两个文件。
    一个是合并后的hex文件，是刷机用的文件。
