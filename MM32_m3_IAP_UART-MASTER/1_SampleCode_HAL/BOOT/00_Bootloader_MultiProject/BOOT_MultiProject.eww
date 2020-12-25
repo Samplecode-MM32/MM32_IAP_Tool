@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>   
+    <project>
+        <path>$WS_DIR$\..\01_Bootloader_UART\EWARM\MM32F103CET6_BOOT_UART.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\..\01_Bootloader_UART\EWARM\MM32L373PF_BOOT_UART.ewp</path>
+    </project>
+    <batchBuild />
+</workspace>

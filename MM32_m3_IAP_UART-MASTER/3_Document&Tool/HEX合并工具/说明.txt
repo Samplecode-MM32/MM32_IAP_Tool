@@ -1,0 +1,26 @@
+1、双击merge_Version.bat运行。
+
+2、版本要输入数字。比如10,20,30,31，分别代表1.0,2.0,3.0,3.1。
+
+3、hex文件放置在hex文件夹下。
+   boot固件地址在前，app固件地址在后。
+   比如：bootloader---0x80000000
+                app---0x80002000
+
+   地址在前的需要放在前面，地址在后的需要放在后面，如下：
+   merge\mergehex.exe --merge .\hex\bootloader.hex                               .\hex\app.hex         --output %%a.hex 
+   merge\mergehex.exe --merge .\hex\app.hex                                      .\hex\bootloader.hex  --output %%a.hex 
+   上面两句是有区别的，关键看谁的起始地址是0x80000000。
+   本脚本采用bootloader的起始地址是0x80000000。
+
+4、同时生成两个文件。
+   一个是合并后的hex文件，是刷机用的文件。
+   另一个是bin文件是app.hex转成bin格式的文件，是用来进行IAP升级用的文件。
+
+5、文件是以当前时间命名的。
+   比如：20160608_11。  
+   20160608是2016-06-08   11是你输入的1.1版本号
+
+注：
+1、如果想合并多个文件可以参考merge文件夹下的merge.bat脚本编写。
+2、hex2bin.exe的使用方法是：拖拽hex文件到其上面释放，自动在当前目录下生成同名bin文件（或者用批处理加参数即可）。

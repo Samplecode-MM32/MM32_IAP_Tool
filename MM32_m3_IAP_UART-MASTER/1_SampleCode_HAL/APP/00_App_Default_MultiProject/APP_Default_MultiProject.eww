@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\..\01_App_Default\EWARM\MM32F103CET6_APP_DEFAULT.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\..\01_App_Default\EWARM\MM32L373PF_APP_DEFAULT.ewp</path>
+    </project>
+    <batchBuild />
+</workspace>
